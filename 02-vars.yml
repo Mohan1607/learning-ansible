@@ -1,5 +1,5 @@
 - name: demo of vars on play level
-  hosts: all
+  hosts: localhost
   vars:
     URL: play.example.com
   tasks:
