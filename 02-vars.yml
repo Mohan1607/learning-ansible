@@ -37,4 +37,4 @@
   tasks:
     - name: Print fact
       ansible.builtin.debug:
-        msg: "{{ansible_host}}","{{ansible_os_family}}"
+        msg: "{{ansible_os_family}}"
