@@ -33,3 +33,8 @@
     - name: print url
       ansible.builtin.debug:
         msg: URL={{URL}}
+- name: Access fact
+  tasks:
+    - name: Print fact
+      ansible.builtin.debug:
+        msg: "{{ansible_host}}","{{ansible_os_family}}"
