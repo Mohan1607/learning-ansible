@@ -23,3 +23,9 @@
     - name: print url
       ansible.builtin.debug:
         msg: "{{URL}}"
+- name: demo of vars on inv file playlevel
+  hosts: localhost
+  tasks:
+    - name: print url
+      ansible.builtin.debug:
+        msg: URL={{URL}}
