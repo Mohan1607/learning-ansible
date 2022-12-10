@@ -49,7 +49,7 @@
       register: out
     - name: set_fact
       ansible.builtin.set_fact:
-        UPTIME:"{{ out.stdout }}"
+        UPTIME: "{{ out.stdout }}"
     - name: access the runtime variable
       ansible.builtin.debug:
         msg: "{{UPTIME}}"
