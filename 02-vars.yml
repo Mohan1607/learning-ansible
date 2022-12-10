@@ -49,7 +49,7 @@
       register: out
     - name: set fact
       ansible.builtin.set_fact:
-        list: "{{out.stdout_lines}}"
+        l: "{{out.stdout_lines}}"
     - name: access the runtime variable
       ansible.builtin.debug:
-        msg: {{ list }}
+        msg: "{{ l }}"
