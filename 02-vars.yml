@@ -44,9 +44,9 @@
   hosts: all
   connection: local
   tasks:
-    - name: execute list command
+    - name: execute UPTIME command
       ansible.builtin.shell: UPTIME
       register: out
     - name: access the runtime variable
       ansible.builtin.debug:
-        msg: "{{OUT}}"
+        msg: "{{out}}"
