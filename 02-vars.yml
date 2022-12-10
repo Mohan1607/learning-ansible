@@ -40,3 +40,13 @@
     - name: Print fact
       ansible.builtin.debug:
         msg: "{{ansible_os_family}}"
+- name: demo on runtime variable
+  hosts: all
+  connection: local
+  tasks:
+    - name: execute list command
+      ansible.builtin.shell: ls
+      register: out
+    - name: access the runtime variable
+      ansible.builtin.debug:
+        msg: "{{out}}"
