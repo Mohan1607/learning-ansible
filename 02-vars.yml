@@ -45,11 +45,11 @@
   connection: local
   tasks:
     - name: execute list command
-      ansible.builtin.shell: ls
+      ansible.builtin.shell: uptime
       register: out
     - name: set fact
       ansible.builtin.set_fact:
-        l: "{{out.stdout_lines}}"
+        UPTIME: "{{out.stdout}}"
     - name: access the runtime variable
       ansible.builtin.debug:
-        msg: "{{ l }}"
+        msg: "{{UPTIME}}"
