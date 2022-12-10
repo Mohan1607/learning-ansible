@@ -45,7 +45,7 @@
   connection: local
   tasks:
     - name: execute list command
-      ansible.builtin.shell: ls
+      ansible.builtin.shell: cal
       register: out
     - name: set fact
       ansible.builtin.set_fact:
