@@ -35,6 +35,7 @@
         msg: URL={{URL}}
 - name: Access fact
   hosts: all
+  connection: local
   tasks:
     - name: Print fact
       ansible.builtin.debug:
