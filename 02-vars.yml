@@ -45,7 +45,7 @@
   connection: local
   tasks:
     - name: execute UPTIME command
-      ansible.builtin.shell: UPTIME
+      ansible.builtin.shell: uptime
       register: out
     - name: access the runtime variable
       ansible.builtin.debug:
