@@ -44,9 +44,12 @@
   hosts: all
   connection: local
   tasks:
-    - name: execute UPTIME command
+    - name: execute uptime command
       ansible.builtin.shell: uptime
       register: out
+    - name: set_fact
+      ansible.builtin.set_fact:
+        UPTIME:"{{ out.stdout }}"
     - name: access the runtime variable
       ansible.builtin.debug:
-        msg: "{{out}}"
+        msg: "{{UPTIME}}"
