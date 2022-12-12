@@ -4,3 +4,4 @@
     - name: print hello if hello is defined
       ansible.builtin.debug:
         msg: hello
+      when: hello is defined
